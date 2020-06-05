@@ -30,13 +30,32 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+We first create a class component by extending React.Component, after which we begin to handle state within the component. We then add a constructor with a super, followed by
+setting this.state to a initial value.
+
 2. Describe the different phases of the component lifecycle.
+
+The first phase is the mounting phase, which set the initial state is being setup. Life cycle methods such as constructor, componentdidmount and render are called
+The second phase is the updating phase, where re-rendering occurs upon there being a state or prop change in the component.
+The last phase is the unmounting phase, this is where the component is removed from the DOM and componentWillUnmount() can be used for cleanup
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+Lifecycle methods allow us to run code at a particular time in the component lifecycle process.
+Some lifecycle methods are constructor() which allow us to initialize local state by assigning an object to this.state
+ComponentDidMount() which set the initial state and renders.
+ComponentDidUpdate() which is invoked immediately upon after updating occurs, allow us to make changes to the DOM when it has been updated.
+
 4. Define stateful logic.
 
+Stateful logic is logic that is built into a component. Such as a function that handles a click event, toggle state or a hook.
+
 5. Describe how to test a React component with React Testing Library.
+
+* We first create a test file such as App.test.js
+* We then "arrange" using the render method which renders a React element / component that we want to test into a virtual dom. This is setting up our code so it can be tested
+* After, we then "act" which we uses a method such as "getByText" to query the DOM for a specific element that contains some text that we expect to see in the browser.
+* Finally, we can "assert" to see the element is doing what it is supposed to, such as by using expect().toBeInTheDocument()
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
